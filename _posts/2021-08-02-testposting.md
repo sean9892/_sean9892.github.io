@@ -11,7 +11,9 @@ tags: [etc]
 
 ### 엄청난 테스트글
 
-$3^x$
+$3^x$ 오...
+
+
 $$
 f(x)=
 \begin{cases}
@@ -19,6 +21,8 @@ f(x)=
 0 && x\notin\mathbb{Q}
 \end{cases}
 $$
+
+
 **굵게**
 
 그냥
