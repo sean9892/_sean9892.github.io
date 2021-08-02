@@ -7,13 +7,19 @@ sitemap:
 ---
 
 **태그는 `[ctrl + f]` 후에 영어로 검색!**  
-**띄어쓰기는 `dynamic-programming` 이렇게!**
+**띄어쓰기는 `earth-science` 이렇게!**
 
 ---
 
-## 자주 찾는 태그
+## 주요 태그
 
-* [etc]({{ site.baseurl }}/tags/etc/)
+* [mathematics]({{ site.baseurl }}/tags/mathematics/)
+* [physics]({{ site.baseurl }}/tags/physics/)
+* [chemistry]({{ site.baseurl }}/tags/chemistry/)
+* [biology]({{ site.baseurl }}/tags/biology/)
+* [earth-science]({{ site.baseurl }}/tags/earth-science/)
+* [computer-science]({{ site.baseurl }}/tags/computer-science/)
+* [engineering]({{ site.baseurl }}/tags/engineering/)
 
 ---
 
