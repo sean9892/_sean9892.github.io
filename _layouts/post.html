@@ -29,7 +29,7 @@ layout: default
             <div id="author-image" style="background-image:url({{ author.image | default: '' }});">
                 <span class="sr-only">{{ author.name }}'s profile image</span>
             </div>
-            <p id="author-name">{{ author.name }}</p>
+            <p id="author-name">{{ author.title }}({{ author.name }})</p>
         </a>
         <p id="post-date">{{ page.date | date: '%Y-%m-%d %H:%M' }}</p>
         <a id="post-more" href="{{ author.url }}">
