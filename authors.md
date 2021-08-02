@@ -6,6 +6,6 @@ sitemap:
   priority: 0.7
 ---
 {% for author in site.authors %}
-* [{{ author.title }}]({{ site.baseurl }}/authors/{{ author.name }})
+* [author.title ({{ author.name }})]({{ site.baseurl }}/authors/{{ author.name }})
 {% endfor %}
 
