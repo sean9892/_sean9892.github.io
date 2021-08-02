@@ -1,4 +1,0 @@
----
-name: http
-title: 'HTTP'
----

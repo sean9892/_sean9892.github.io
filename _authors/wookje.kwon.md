@@ -1,5 +1,5 @@
 ---
-name: wookje.kwon
-title: 권욱제
+name: yubin.choi
+title: 최유빈
 image: /files/authors/wookje.kwon.jpg
 ---
