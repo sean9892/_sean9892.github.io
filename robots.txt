@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://wookje.github.io/sitemap.xml
+Sitemap: http://pitchicle.github.io/sitemap.xml

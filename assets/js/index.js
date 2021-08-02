@@ -41,7 +41,7 @@
             e.preventDefault();
             var q = $('#searchQueryEdit').val();
             var url = 'https://www.google.co.kr/search?q='
-                        + encodeURIComponent(q + ' site:wookje.dance');
+                        + encodeURIComponent(q + ' site:pitchicle.github.io');
             window.open(url, '', '_blank');
         });
         */
