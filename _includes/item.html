@@ -16,7 +16,7 @@
                  {% if author.image %}style="background-image:url({{ author.image }});"{% endif %}>
                 <span class="sr-only">{{ author.name }}'s profile image</span>
             </div>
-            <p class="author-name">{{ author.title }}({{ author.name }})</p>
+            <p class="author-name">{{ author.title }}</p>
         </a>
         <p class="post-date">{{ post.date | date: '%Y-%m-%d %H:%M' }}</p>
     </div>
