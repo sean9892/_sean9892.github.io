@@ -1,15 +1,13 @@
 ---
 layout: page
-title: About
-permalink: /about/
-image: /files/covers/blog.jpg
+title: 소개
+image: /files/covers/openapi.png
+permalink: /whoami/
 sitemap: yes
-tags: [about]
+comments: true
+excerpt: 욱제를 소개합니다.
+tags: []
 ---
 
-[wookje](https://wookje.dance) 욱제 블로그
-
-[카카오 블로그](https://github.com/kakao) 그대로 포크 떠서 사용했습니다!
-
-Powered by [GitHub Pages](https://pages.github.com) and [Jekyll](https://jekyllrb.com).
+동아리 소개 쓰면 됨
 
