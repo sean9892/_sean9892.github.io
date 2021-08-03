@@ -6,7 +6,7 @@ sitemap:
   priority: 0.7
 ---
 <script>
-const modifiedsiteauthors = site.authors;
+const modifiedsiteauthors = {{site.authors}};
 arr.sort(function(a,b){
 	return a.title<b.title;
 });
