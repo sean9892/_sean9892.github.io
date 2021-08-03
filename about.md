@@ -2,10 +2,10 @@
 layout: page
 title: 소개
 image: /files/covers/openapi.png
-permalink: /whoami/
+permalink: /about/
 sitemap: yes
 comments: true
-excerpt: 욱제를 소개합니다.
+excerpt: Introducing Pitchicle
 tags: []
 ---
 
