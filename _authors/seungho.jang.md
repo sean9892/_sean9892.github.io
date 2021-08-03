@@ -1,0 +1,6 @@
+---
+name: ename
+title: '장승호'
+image: /files/authors/seungho.jang.png
+---
+
