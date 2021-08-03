@@ -5,7 +5,12 @@ permalink: /authors/
 sitemap:
   priority: 0.7
 ---
-{% for author in site.authors %}
+<script>
+const modifiedsiteauthors = site.authors;
+arr.sort(function(a,b){
+	return a.title<b.title;
+});
+</script>
+{% for author in modifiedsiteauthors %}
 * [{{author.title}} ({{ author.name }})]({{ site.baseurl }}/authors/{{ author.name }})
 {% endfor %}
-

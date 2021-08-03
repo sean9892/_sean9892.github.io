@@ -58,12 +58,5 @@ asset_url: /assets
 #asset_url: //t1.daumcdn.net/osa/blog/assets
 google_analytics:
   ua: 'UA-203797473-1'
-#facebook:
-#  app_id: '956026527861303'
-#  username: wookje
-#twitter:
-#  username: kakaodev
-#google_plus:
-#  username: wookje
-#github:
-#  username: wookje
+twitter:
+  username: Pitch_article
