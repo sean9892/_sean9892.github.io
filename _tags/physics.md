@@ -1,6 +1,6 @@
 ---
 name: physics
 title: 'physics'
-image: files/covers/tagcover/physics.png
+image: files/covers/tagcover/physics.jpg
 ---
 
