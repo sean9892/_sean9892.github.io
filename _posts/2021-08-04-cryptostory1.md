@@ -1,10 +1,10 @@
 ---
 layout: post
-comments: true
+title: '암호학 이야기(1) - 그래서 암호가 뭔데?'
 author: yubin.choi
+comments: true
 date: 2021-08-04 14:35
 use_math: true
-title: '암호학 이야기(1) - 그래서 암호가 뭔데?'
 tags: [computer_science]
 ---
 
