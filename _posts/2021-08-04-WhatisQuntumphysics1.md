@@ -5,7 +5,7 @@ author: yeonwoo.bae
 comments: true
 date: 2021-08-04 14:01
 use_math: true
-image: https://user-images.githubusercontent.com/82321028/128125849-d99ff8a8-4a05-45fc-9a76-da7088557250.jpg
+image: "https://user-images.githubusercontent.com/82321028/128125849-d99ff8a8-4a05-45fc-9a76-da7088557250.jpg"
 tags: [physics]
 ---
 
@@ -19,7 +19,7 @@ tags: [physics]
 
 
 
-[하이젠베르크의 현미경에 대한 그림. 위치에 대한 정확도를 높이기 위해 파장이 짧은 빛으로 입자를 관측하면 빛과 충돌한 입자가 운동하여 운동량의 불확도가 높아지고 파장이 긴 빛을 사용하면 운동량의 불확도는 낮아지지만 위치의 불확도가 높아짐을 보이고 있다.](https://user-images.githubusercontent.com/82321028/128125583-3eb118d9-31c0-444a-9191-e2460ea3f8a5.PNG)
+[하이젠베르크의 현미경에 대한 그림. 위치에 대한 정확도를 높이기 위해 파장이 짧은 빛으로 입자를 관측하면 빛과 충돌한 입자가 운동하여 운동량의 불확도가 높아지고 파장이 긴 빛을 사용하면 운동량의 불확도는 낮아지지만 위치의 불확도가 높아짐을 보이고 있다.] (https://user-images.githubusercontent.com/82321028/128125583-3eb118d9-31c0-444a-9191-e2460ea3f8a5.PNG)
 
 
 
