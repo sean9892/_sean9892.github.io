@@ -743,7 +743,7 @@ body.page-template #cover {
 }
 
 body.home-template #cover {
-    background-image: url(../images/default_blog_cover.jpg);
+    background-image: url(../images/default_blog_cover.png);
 }
 
 body.post-template #cover {
