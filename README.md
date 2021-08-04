@@ -7,15 +7,16 @@
 ###### Todo-List
 
 - 동아리 소개글 작성
-- `default page cover` 변경
-- `default post cover` 변경
-- `default tag cover` 변경
 
 ###### 2021.08.04
 
 - 태그 이미지 추가
 - 메인화면 이미지 추가
 - 메인화면 문구 변경
+- `default page cover` 변경
+- `default post cover` 변경
+- `default tag cover` 변경
+- `default author cover` 변경
 
 ###### 2021.08.03
 
