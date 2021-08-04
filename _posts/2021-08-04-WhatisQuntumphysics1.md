@@ -1,7 +1,7 @@
 ---
 layout: post
 title : '그래서 양자역학이 뭔데? -프롤로그'
-author: yeonwoo.Bae
+author: yeonwoo.bae
 comments: true
 date: 2021-08-04 14:01
 use_math: true
