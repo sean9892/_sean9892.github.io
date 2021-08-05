@@ -15,7 +15,7 @@
 
     <ul id="menu" class="nav">
 		{% assign sliceLimit = page.url.size | at_most: 9 %}
-		{% assign psliced = page.url | slice:0,sliceLimit %}
+		{% assign psliced = page.url | slice:0,{{sliceLimit}} %}
         <li class="{% if page.url == '/' %} active {% endif %}"><a href="{{ base_path }}/">블로그 {{ sliceLimit }}</a></li>
         <li class="{% if page.url == '/about/' %} active {% endif %}"><a href="{{ base_path }}/about/">동아리 소개 {{ psliced }}</a></li>
 		<li class="{% if psliced == '/authors/' %} active {% endif %}"><a href="{{ base_path }}/authors/">저자 소개</a></li>
