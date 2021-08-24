@@ -3,7 +3,7 @@ email: sean9892@gmail.com
 description: Crypto&PS
 
 baseurl: ''
-url: 'https://sean9892.github.io'
+url: 'http://127.0.0.1:4000/'
 timezone: Asia/Seoul 
 
 repository: sean9892/sean9892.github.io
@@ -55,7 +55,7 @@ image: '/assets/images/default_blog_cover.jpg'
 asset_url: /assets
 #asset_url: //meta-kage.kakaocdn.net/dn/osa/blog/assets
 #asset_url: //t1.daumcdn.net/osa/blog/assets
-google_analytics:
-  ua: 'UA-158382114-1'
+#google_analytics:
+#  ua: 'UA-158382114-1'
 #twitter:
 #  username:
