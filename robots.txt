@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://pitchicle.github.io/sitemap.xml
+Sitemap: https://sean9892.github.io/sitemap.xml
