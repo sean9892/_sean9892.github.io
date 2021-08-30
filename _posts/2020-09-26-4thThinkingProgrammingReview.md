@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[BOJ] A+B"
+title: "제 4회 생각하는 프로그래밍 대회 Open Contest 후기"
 author: yubin.choi
 comments: true
 date: 2020-09-26 00:00
@@ -10,7 +10,7 @@ tags: [contest]
 
 
 
-제 4회 생각하는 프로그래밍 대회 Open Contest 후기
+
 
 
 
