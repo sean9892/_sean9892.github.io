@@ -12,7 +12,7 @@ tags: [crypto]
 
 > 이 글은 이전에 작성한 Tonelli-Shanks 구현 포스팅에 Tonelli-Shanks에 대한 이론적 내용을 덧붙여 작성한 글입니다. 배우며 작성한 글이므로 틀린 내용이 있을 수 있으니, 발견하시면 댓글로 알려주시길 바랍니다.
 
-> 본 글은 https://rkm0959.tistory.com/20를 토대로 학습하며 작성한 글입니다. 
+> 본 글은 [https://rkm0959.tistory.com/20](https://rkm0959.tistory.com/20)를 토대로 학습하며 작성한 글입니다. 
 
 암호학을 공부하다 보면 $\mathbb{Z}/p\mathbb{Z}$에서 이차방정식을 풀어야 할 필요가 있다. CTF에서 RSA 문제를 풀 때 $m^2\mod p$를 구했다거나, Diffie-Hellman 프로토콜 문제를 풀며 $g^2 \mod p$로부터 $g$를 찾아야 한다거나... 여러 상황에서 이차방정식을 해결할 수 있다면 편리할 것이다.
 
