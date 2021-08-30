@@ -3,7 +3,7 @@ layout: post
 title: "Tonelli-Shanks 알고리즘 구현"
 author: yubin.choi
 comments: true
-date: 2020-04-22 00:00
+date: 2020-11-20 00:00
 use_math: true
 tags: [crypto]
 ---
