@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Introduction and Proof for Tonelli-Shanks Algorithm"
+title: "Introduction and Proof of Tonelli-Shanks Algorithm"
 author: yubin.choi
 comments: true
 date: 2021-08-30 20:00
