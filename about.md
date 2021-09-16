@@ -9,9 +9,13 @@ excerpt: Introducing
 tags: []
 ---
 
-### 학력
+### 학력 / 소속
 
-- **(20.03-Current) 충북과학고등학교 재학** 
+- 학교
+  - (20.03-Current) 충북과학고등학교 재학
+- CTF
+  - (21.01-Current) Hyp3rFlow
+  - (21.08-Current) ST4RT
 
 ### OJ 프로필
 
@@ -34,6 +38,13 @@ tags: []
   - KOI 지역예선 중등부
 - 2016
   - KOI 전국본선 초등부 은상
+
+### CTF 활동
+
+- 2021
+  - Tenable CTF 2021 (Hyp3rFlow) / 12th
+  - ANUSEC 2021 (Hyp3rFlow) / 7th
+  - CakeCTF 2021 (rkm_fanclub) / 8th
 
 ###### Just For Fun
 
