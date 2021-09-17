@@ -61,11 +61,12 @@ flag의 각 문자의 아스키코드 $m$에 대해 $g^{rm}\text{ mod }p$를 cs�
 이 값을 가지고 tonelli-shanks 알고리즘을 두 번 사용하면 최대 4개의 $g^r \text{ mod }p$ 값 후보를 얻을 수 있다. 4개의 값 모두에 대해 위에서 언급한 bruteforcing을 하여 플래그가 정상적으로 구해는 것을 찾으면 된다.
 
 <details>
-    <summary>[discrete-log] flag 확인하기</summary>
+    <summary>**▶ [discrete-log] flag 확인하기**</summary>
     <p>
         flag: CakeCTF{ba37a0f409ef3ec23a6cffbc474a1cef}
     </p>
 </details>
+
 
 
 
@@ -76,15 +77,15 @@ $$
 R_{n+64} = R_{n}\oplus R_{n+1}\oplus R_{n+8}\oplus R_{n+16}
 $$
 
-
 64bit LFSR인데, flag 공통접두사인 **CakeCTF{**가 마침 64bit이므로 seed를 쉽게 구할 수 있다. 주의할 것은 flag 맨 앞글자인 **C**를 ascii 코드 값으로 변환했을 때 leading zero가 존재한다는 점이다. 이를 유의하여 LFSR의 seed를 구하고 LFSR을 구현하여 flag를 간단하게 얻을 수 있다.
 
 <details>
-    <summary>[improvisation] flag 확인하기</summary>
+    <summary>**▶ [improvisation] flag 확인하기**</summary>
     <p>
         flag: CakeCTF{d0n't_3xp3c7_s3cur17y_2_LSFR}
     </p>
 </details>
+
 
 
 
@@ -108,14 +109,14 @@ RSA puzzle인데, 이게 대체 crypto인지 그냥 정수론 문제인지 잘 �
 
 $n$, $c$, $x=(p+q)^r \text{ mod }n$과 $y=(p+qr)^r\text{ mod }n$이 주어질 때 $c$를 복호화하는 문제이다. 이런 문제 유형에서는 $p$, $q$, $r$을 구하여 $\phi(n)$를 구하는 것이 풀이일게 뻔하므로 $n$을 소인수분해해야 한다.
 
-이항정리를 이용하여 $|y-x|$를 계산해보면 $q$의 배수임을 알 수 있다. $\gcd(|y-x|,n)$을 계산하면 $q$를 알 수 있다.
+이항정리를 이용하여 $y-x$를 계산해보면 $q$의 배수임을 알 수 있다. $\gcd(y-x,n)$을 계산하면 $q$를 알 수 있다.
 
 $y-x$를 전개한 것을 잘 살펴보면, $q^{r}r^r-q^{r}$인데, 페르마 소정리에 의해 $r$로 나눈 나머지가 $q$임을 알 수 있다. 따라서 $\gcd(y-x-q,{n\over q})$를 계산해주면 $r$을 알 수 있다.
 
 $p$, $q$, $r$의 값을 모두 구했으면 $\phi(pqr)$은 쉽게 계산할 수 있고, 이를 이용해 $c$를 복호화해주면 flag를 알 수 있다.
 
 <details>
-    <summary>[together as one] flag 확인하기</summary>
+    <summary>**▶ [together as one] flag 확인하기**</summary>
     <p>
         flag: CakeCTF{This_chall_is_inspired_by_this_music__Check_out!__https://www.youtube.com/watch?v=vLadkYLi8YE_cf49dcb6a31f}
     </p>
