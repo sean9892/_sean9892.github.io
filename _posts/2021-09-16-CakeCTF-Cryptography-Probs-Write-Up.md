@@ -121,4 +121,3 @@ $p$, $q$, $r$의 값을 모두 구했으면 $\phi(pqr)$은 쉽게 계산할 수 
         flag: CakeCTF{This_chall_is_inspired_by_this_music__Check_out!__https://www.youtube.com/watch?v=vLadkYLi8YE_cf49dcb6a31f}
     </p>
 </details>
-
