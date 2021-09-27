@@ -3,9 +3,9 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
-  let ratings = { 'codeforces':0, 'BOJ':0, "solved":0, 'atcoder':0 };
-  let handles = { 'codeforces':'{{ include.codeforces_id | default: "None" }}', 'BOJ':'{{ include.boj_id | default: "None" }}', 'atcoder':'{{ include.atcoder_id | default: "None" }}' };
-  let url = { 'codeforces':'https://codeforces.com/profile/', 'BOJ':'http://icpc.me/', 'solved':'https://solved.ac/profile/', 'atcoder':'https://atcoder.jp/users/' };
+  let ratings = { 'codeforces':0, 'BOJ':0, "solved":0, 'atcoder':0, 'cryptohack':0 };
+  let handles = { 'codeforces':'{{ include.codeforces_id | default: "None" }}', 'BOJ':'{{ include.boj_id | default: "None" }}', 'atcoder':'{{ include.atcoder_id | default: "None" }}', 'cryptohack':'{{ include.cryptohack_id | default:"None" }}' };
+  let url = { 'codeforces':'https://codeforces.com/profile/', 'BOJ':'http://icpc.me/', 'solved':'https://solved.ac/profile/', 'atcoder':'https://atcoder.jp/users/', 'cryptohack':'https://cryptohack.org/user/' };
   let colors = {
     'codeforces':[
       { color:'#808080', min:0,    max:1199 },
@@ -43,7 +43,8 @@
       { color:'#6666FF', min:1200, max:1499 },
       { color:'#DDCC00', min:1500, max:2199 },
       { color:'#EE0000', min:2200, max:9999 }
-    ]
+    ],
+	'cryptohack':[ { color:'#EC4F2F', min:0, max:99999 } ]
   };
   const solved_tier = [
       "unranked",
@@ -68,6 +69,7 @@
     if(service === 'BOJ') cf.innerHTML = `${handles[service]} (${ratings['BOJ'].toString()} solved)`;
     else if(service === 'solved') cf.innerHTML = `${handles[service]} (${ratings['solved_ac_rating']}, ${solved_tier[ratings[service]]})`;
     else if(service === 'mx_codeforces') cf.innerHTML = `Max. ${ratings[service]}`;
+	else if(service === 'cryptohack') cf.innerHTML = `${handles[service]} (${ratings['cryptohack'].toString()} pts)`;
     else cf.innerHTML = `${handles[service]} (${ratings[service].toString()})`;
 
     setRainbow('BOJ');
@@ -162,6 +164,28 @@
       }
     });
   }
+  
+  function getCryptohackInfo() {
+	$.ajax({
+      type: 'GET',
+      url: 'https://cryptohack.org/api/user/'+handles['cryptohack']+'/',
+      dataType: 'json',
+      timeout: 10000,
+      cache: false,
+      success: function(json) {
+        if(json) {
+          ratings['cryptohack'] = json['score'];
+          setHtml('cryptohack');
+        }
+        else {
+          setHtmlWithoutColor('cryptohack');
+        }
+      },
+      error: function() {
+        setHtmlWithoutColor('cryptohack');
+      }
+    });
+  }
 
   function makeProfileList(){
     let inner = "";
@@ -175,6 +199,9 @@
     if(handles['atcoder'] !== 'None'){
       inner += `<li>atcoder: <a id="atcoder" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>`;
     }
+	if(handles['cryptohack'] !== 'None'){
+      inner += `<li>cryptohack: <a id="cryptohack" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>`;
+    }
 
     let ul = document.getElementById('profile-list');
     ul.innerHTML = inner;
@@ -182,6 +209,7 @@
     if(handles['BOJ'] !== 'None') getBOJInfo();
     if(handles['codeforces'] !== 'None') getCodeforcesRating();
     if(handles['atcoder'] !== 'None') getAtCoderInfo();
+	if(handles['cryptohack'] !== 'None') getCryptohackInfo();
   }
 
   makeProfileList();

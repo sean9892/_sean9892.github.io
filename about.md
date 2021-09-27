@@ -19,7 +19,7 @@ tags: []
 
 ### OJ 프로필
 
-{% include judge_profile.html boj_id="sean9892" codeforces_id="sean9892" %}
+{% include judge_profile.html boj_id="sean9892" codeforces_id="sean9892" cryptohack_id="sean9892" %}
 
 ### 대회 참가/수상
 
