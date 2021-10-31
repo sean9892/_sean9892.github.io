@@ -46,6 +46,7 @@ tags: []
   - Tenable CTF 2021 (Hyp3rFlow) / 12th
   - ANUSEC 2021 (Hyp3rFlow) / 7th
   - CakeCTF 2021 (rkm_fanclub) / 8th
+  - SunshineCTF 2021 (ST4RT) / 10th
 
 ###### Just For Fun
 
