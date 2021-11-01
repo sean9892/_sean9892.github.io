@@ -32,6 +32,9 @@ collections:
   tags:
     output: true
     permalink: /tags/:path/
+  drafts:
+    output: true
+    permalink: /draft/:path/
 
 defaults:
   - scope:
