@@ -1,0 +1,29 @@
+---
+layout: post
+---
+
+<div id="encrypted-content">
+  <form id="encrypt-form" action="#" method="">
+    <input id="encrypt-password"
+           type="password"
+           name="password"
+           placeholder="password"
+           autofocus />
+
+    <input type="submit" value="Unlock"/>
+  </form>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.js" integrity="sha512-bvV1V1YSjP1fbfKJjTlNmdnUO2XpsLYUdKwmz5UXBi5U+x40rx9JpA0ooQUMZfpz1MaaBC0ydNLoC6r0sitPUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+	document.getElementById('encrypt-form').addEventListener('submit', function(e) {
+		e.preventDefault();
+		var ct  = '{{ page.encrypted }}',
+		    key = document.getElementById('encrypt-password').value;
+			key = CryptoJS.MD5(key).toString().substr(0,32);
+		var pt  = CryptoJS.AES.decrypt(ct,key).toString(CryptoJS.enc.Utf8);
+		var converter = new showdown.Converter(),
+		    content   = converter.makeHtml(pt);
+		document.getElementById('encrypted-content').innerHTML = "<scr"+"ipt>console.log('!');</scr"+"ipt>"+content;
+	});
+  </script>
+</div>
