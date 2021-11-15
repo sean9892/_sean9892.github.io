@@ -23,21 +23,7 @@ layout: post
 		var pt  = CryptoJS.AES.decrypt(ct,key).toString(CryptoJS.enc.Utf8);
 		var converter = new showdown.Converter(),
 		    content   = converter.makeHtml(pt);
-		var div = document.createElement('div');
-		div.innerHTML = content;
-		document.getElementById('unlocked-content').appendChild(div);
-		document.getElementById('encrypted-content').innerHTML = "";
-		/*var setInnerHTML = function(elm, html) {
-		  elm.innerHTML = html;
-		  Array.from(elm.querySelectorAll("script")).forEach( oldScript => {
-			const newScript = document.createElement("script");
-			Array.from(oldScript.attributes)
-			  .forEach( attr => newScript.setAttribute(attr.name, attr.value) );
-			newScript.appendChild(document.createTextNode(oldScript.innerHTML));
-			oldScript.parentNode.replaceChild(newScript, oldScript);
-		  });
-		}
-		setInnerHTML(document.getElementById('encrypted-content'),content);*/
+		document.getElementById("encrypted-content").innerHTML = content;
 	});
   </script>
 </div>
