@@ -23,7 +23,11 @@ layout: post
 		var pt  = CryptoJS.AES.decrypt(ct,key).toString(CryptoJS.enc.Utf8);
 		var converter = new showdown.Converter(),
 		    content   = converter.makeHtml(pt);
-		var setInnerHTML = function(elm, html) {
+		var div = document.createElement('div');
+		div.innerHTML = content;
+		document.getElementById('unlocked-content').appendChild(div);
+		document.getElementById('encrypted-content').innerHTML = "";
+		/*var setInnerHTML = function(elm, html) {
 		  elm.innerHTML = html;
 		  Array.from(elm.querySelectorAll("script")).forEach( oldScript => {
 			const newScript = document.createElement("script");
@@ -33,7 +37,9 @@ layout: post
 			oldScript.parentNode.replaceChild(newScript, oldScript);
 		  });
 		}
-		setInnerHTML(document.getElementById('encrypted-content'),content);
+		setInnerHTML(document.getElementById('encrypted-content'),content);*/
 	});
   </script>
+</div>
+<div id="unlocked-content">
 </div>
