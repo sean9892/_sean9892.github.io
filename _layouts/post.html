@@ -7,7 +7,7 @@ layout: default
 </div>
 
 <div id="cover" class="container"
-     {% if page.image %}style="background-image: url({{ page.image }});"{% endif %}>
+     style="background-image: url({{ page.image | default: 'https://user-images.githubusercontent.com/46587635/142005373-1800b2af-c063-4183-b82f-42846ba07ab5.jpg' }});">
     <div>
         <h1>{{ page.title }}</h1>
         <p>
