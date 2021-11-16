@@ -26,11 +26,12 @@ layout: post
 		var pt  = CryptoJS.AES.decrypt(ct,key).toString(CryptoJS.enc.Utf8);
 		var converter = new showdown.Converter(),
 		    content   = converter.makeHtml(pt);
-		document.getElementById("encrypted-content").innerHTML = content;
 		var langs = ["cpp","python","html"]
 		langs.forEach((e) => {
 		  content = content.replace('<code class="'+e+' language-'+e+'">','<code class="language-'+e+'">');
 		});
+		content = content.replace('<pre>','<pre style="background:#F0F0F0">');
+		document.getElementById("encrypted-content").innerHTML = content;
 		hljs.highlightAll();
 	});
   </script>
