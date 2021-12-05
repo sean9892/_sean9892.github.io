@@ -67,18 +67,18 @@ Tonelli-Shanks 알고리즘은 다음과 같이 진행된다.
 
 3. $\text{mod } p$에서 quadratic non-residue인 정수 $z$를 하나 찾는다.
    Lemma 2에 의해 조사해야 하는 수의 개수의 기댓값이 2임을 알 수 있다.
-
+   
    최악의 경우에도 Lemma 3에 의해 $O(\sqrt{p}\log{p})$에 찾을 수 있으나, 보통은 거의 상수 시간복잡도로 찾을 수 있다.
 
 4. 다음과 같이 정의하자.
-
+   
    - $M\equiv S\text{ (mod } p\text{)}$
    - $c\equiv z^Q \text{ (mod } p\text{)}$
    - $t\equiv n^Q\text{ (mod } p\text{)}$
    - $R\equiv n^{Q+1\over2}\text{ (mod } p\text{)}$
 
 5. 다음 과정을 반복한다.
-
+   
    - $t=0$이면 $0$을 출력한다.
    - $t=1$이면 $R$을 출력한다.
    - $0<i<M$과 $t^{2^i}\equiv1\text{ (mod } p\text{)}$를 만족하는 최소의 자연수 $i$를 찾는다.
@@ -92,7 +92,7 @@ Tonelli-Shanks 알고리즘은 다음과 같이 진행된다.
 초기의 정의를 다시 한 번 봐보자.
 
 - $M=S$
--  $c\equiv z^Q \text{ (mod } p\text{)}$
+- $c\equiv z^Q \text{ (mod } p\text{)}$
 - $t\equiv n^Q\text{ (mod } p\text{)}$
 - $R\equiv n^{Q+1\over2}\text{ (mod } p\text{)}$
 
@@ -117,6 +117,7 @@ $b$의 정의에 따라 다음과 같은 명제가 성립한다.
 - ${c^\prime}^{2^{M^\prime-1}}\equiv b^{2^i}\equiv c^{2^{M-1}}\equiv-1\text{ (mod } p\text{)}$
 
 - ${t^\prime}^{2^{M^\prime-1}}\equiv t^{2^{M^\prime-1}}b^{2^{M^\prime}}\equiv(-1)\cdot(-1)\equiv1\text{ (mod } p\text{)}$
+
 - ${R^\prime}^{2}\equiv R^2b^2\equiv ntb^2\equiv nt^\prime\text{ (mod } p\text{)}$
 
 따라서 **(A)**에서 성립한 식은 (5.)를 몇 번 반복하더라도 여전히 성립함을 알 수 있다.
@@ -144,13 +145,13 @@ def tonelli_shanks(n,p):
     # (1.)
     if not isQR(n,p):
         return -1
-    
+
     # (2.)
     Q,S=p-1,0
     while Q%2==0:
         S+=1
         Q//=2
-    
+
     # (3.)
     z=None
     for x in range(2,p):
@@ -159,7 +160,7 @@ def tonelli_shanks(n,p):
             break
     # (4.)
     M,c,t,R=S,pow(z,Q,p),pow(n,Q,p),pow(n,(Q+1)//2,p)
-    
+
     # (5.)
     while True:
         if t==0:
@@ -186,4 +187,3 @@ if __name__=='__main__':
     print("STARTED")
     print(tonelli_shanks(n,p))
 ```
-
