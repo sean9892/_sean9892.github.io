@@ -8,7 +8,7 @@ use_math: true
 tags: [math]
 ---
 
-###### 페르마 소정리의 행렬로의 확장
+###### Extension of FLT to Matrix base / 페르마 소정리의 행렬로의 확장
 
 ## 1. 다항식의 곱셈과 행렬
 
