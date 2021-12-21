@@ -12,7 +12,7 @@ tags: []
 ### 학력 / 소속
 
 - 학교
-  - (20.03-Current) 충북과학고등학교 재학
+  - (20.03-22.02) 충북과학고등학교
 - CTF
   - (21.01-Current) Hyp3rFlow
   - (21.08-Current) ST4RT
@@ -40,7 +40,7 @@ tags: []
 - 2016
   - KOI 전국본선 초등부 은상
 
-### CTF 활동
+### CTF
 
 - 2021
   - Tenable CTF 2021 (Hyp3rFlow) / 12th
