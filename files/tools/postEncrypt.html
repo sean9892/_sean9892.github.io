@@ -21,7 +21,6 @@
 		reader.readAsText(file);
 		setTimeout(() => {
 		  if(typeof(fileData)=='undefined')return;
-		  fileData = fileData.split("---\r\n",3)[2];
 		  key = CryptoJS.MD5(prompt("Input Key")).toString().substr(0,32);
 		  console.log(key);
 		  console.log(typeof(key));

@@ -20,6 +20,8 @@ layout: post
     outline: none;
   }
 </style>
+<div id = "post-content">
+</div>
 <div id="encrypted-content">
   <p style="font-family:'Arvo',serif;font-size:30px;text-align:center;">Locked Post</p>
   <br>
@@ -27,7 +29,7 @@ layout: post
 	<input id="encrypt-password"
 		   type="password"
 		   name="password"
-		   placeholder="> pwd"
+		   placeholder="> {{ page.pwdhint | default:'pwd' }}"
 		   autofocus />
   </form>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
@@ -46,8 +48,12 @@ layout: post
 		  content = content.replace('<code class="'+e+' language-'+e+'">','<code class="language-'+e+'" style="text-align:left">');
 		});
 		content = content.replace('<pre>','<pre style="background:#F0F0F0">');
-		document.getElementById("encrypted-content").innerHTML = content;
+		document.getElementById("post-content").innerHTML = content;
+		MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 		hljs.highlightAll();
+		var parent = document.getElementById("content");
+		var child = document.getElementById("encrypted-content");
+		parent.removeChild(child);
 	});
   </script>
 </div>
