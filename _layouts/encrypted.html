@@ -19,6 +19,17 @@ layout: post
   #encrypt-password:focus {
     outline: none;
   }
+  code {
+	background-color:#FFF8E5;
+  }
+  img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  p {
+	text-align: left;
+  }
 </style>
 <div id="encrypted-content">
   <p style="font-family:'Arvo',serif;font-size:30px;text-align:center;">Locked Post</p>
@@ -39,6 +50,7 @@ layout: post
 		    key = document.getElementById('encrypt-password').value;
 			key = CryptoJS.MD5(key).toString().substr(0,32);
 		var pt  = CryptoJS.AES.decrypt(ct,key).toString(CryptoJS.enc.Utf8);
+		showdown.setFlavor('github');
 		var converter = new showdown.Converter(),
 		    content   = converter.makeHtml(pt);
 		var langs = ["cpp","python","html"]
@@ -46,15 +58,17 @@ layout: post
 		  content = content.replace('<code class="'+e+' language-'+e+'">','<code class="language-'+e+'" style="text-align:left">');
 		});
 		content = content.replace('<pre>','<pre style="background:#F0F0F0">');
-		var parent = document.getElementById("content");
+		var parent = document.getElementById("post-content");
 		var pc = document.createElement("div");
-		pc.setAttribute("id","post-content");
-		parent.appendChild(pc);
-		document.getElementById("post-content").innerHTML = content;
+		pc.setAttribute("id","decrypted-content");
+		parent.insertBefore(pc,document.getElementById("encrypted-content"));
+		document.getElementById("decrypted-content").innerHTML = content;
 		MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 		hljs.highlightAll();
 		var child = document.getElementById("encrypted-content");
-		parent.removeChild(child);
+		console.log(typeof(child));
+		console.log(child);
+		child.parentNode.removeChild(child);
 	});
   </script>
 </div>
