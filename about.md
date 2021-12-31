@@ -13,6 +13,7 @@ tags: []
 
 - 학교
   - (20.03-22.02) 충북과학고등학교
+  - (22.03-Current) 한국과학기술원(KAIST)
 - CTF
   - (21.01-Current) Hyp3rFlow
   - (21.08-Current) ST4RT
@@ -47,6 +48,12 @@ tags: []
   - ANUSEC 2021 (Hyp3rFlow) / 7th
   - CakeCTF 2021 (rkm_fanclub) / 8th
   - SunshineCTF 2021 (ST4RT) / 10th
+
+### 대회 출제 / 검수
+
+- 2021
+  - 제 3회 충북과학고 알고리즘 리그(CAL) 출제 / 검수
+  - GBS Coding Contest 2021 검수
 
 ###### Just For Fun
 
