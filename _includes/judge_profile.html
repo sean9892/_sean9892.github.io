@@ -3,8 +3,9 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
-  let ratings = { 'codeforces':0, 'BOJ':0, "solved":0, 'atcoder':0, 'cryptohack':0 };
-  let handles = { 'codeforces':'{{ include.codeforces_id | default: "None" }}', 'BOJ':'{{ include.boj_id | default: "None" }}', 'atcoder':'{{ include.atcoder_id | default: "None" }}', 'cryptohack':'{{ include.cryptohack_id | default:"None" }}' };
+  let ratings = { 'codeforces':0, 'BOJ':0, "solved":0, 'atcoder':0, 'cryptohack':0, 'codeup':0 };
+  let ranks = { 'codeup':0 };
+  let handles = { 'codeforces':'{{ include.codeforces_id | default: "None" }}', 'BOJ':'{{ include.boj_id | default: "None" }}', 'atcoder':'{{ include.atcoder_id | default: "None" }}', 'cryptohack':'{{ include.cryptohack_id | default:"None" }}', 'codeup':'{{ include.codeup_id | default:"None" }}' };
   let url = { 'codeforces':'https://codeforces.com/profile/', 'BOJ':'http://icpc.me/', 'solved':'https://solved.ac/profile/', 'atcoder':'https://atcoder.jp/users/', 'cryptohack':'https://cryptohack.org/user/' };
   let colors = {
     'codeforces':[
@@ -44,7 +45,22 @@
       { color:'#DDCC00', min:1500, max:2199 },
       { color:'#EE0000', min:2200, max:9999 }
     ],
-	'cryptohack':[ { color:'#EC4F2F', min:0, max:99999 } ]
+	'cryptohack':[ { color:'#EC4F2F', min:0, max:99999 } ],
+	'codeup':[
+      { color:'#808080', min:0,    max:49   },
+      { color:'#000000', min:50,   max:99   },
+      { color:'#8E8C01', min:100,  max:199  },
+      { color:'#C6B207', min:200,  max:299  },
+      { color:'#A7C607', min:300,  max:399  },
+      { color:'#008000', min:400,  max:499  },
+      { color:'#FF0000', min:500,  max:599  },
+	  { color:'#03A89E', min:600,  max:699  },
+      { color:'#0000FF', min:700,  max:799  },
+      { color:'#AA00AA', min:800,  max:899  },
+      { color:'#FF8C00', min:900,  max:999  },
+      { color:'#FF0000', min:1000, max:1099 },
+	  { color:'#FF0000', min:1100, max:9999 },
+    ]
   };
   const solved_tier = [
       "unranked",
@@ -70,6 +86,14 @@
     else if(service === 'solved') cf.innerHTML = `${handles[service]} (${ratings['solved_ac_rating']}, ${solved_tier[ratings[service]]})`;
     else if(service === 'mx_codeforces') cf.innerHTML = `Max. ${ratings[service]}`;
 	else if(service === 'cryptohack') cf.innerHTML = `${handles[service]} (${ratings['cryptohack'].toString()} pts)`;
+	else if(service === 'codeup') {
+	  let rank = ranks['codeup'].toString();
+	  if(ranks['codeup'] === 1) rank+="st";
+	  else if(ranks['codeup'] === 2) rank+="nd";
+	  else if(ranks['codeup'] === 3) rank+="rd";
+	  else rank+="th";
+	  cf.innerHTML = `${handles[service]} (${ratings['codeup'].toString()} solved / ${rank})`;
+	}
     else cf.innerHTML = `${handles[service]} (${ratings[service].toString()})`;
 
     setRainbow('BOJ');
@@ -186,6 +210,31 @@
       }
     });
   }
+  
+  function getCodeupInfo() {
+	$.ajax({
+	  type: 'GET',
+	  url: 'https://proxy.cgiosy.workers.dev/https://codeup.kr/userinfo.php?user='+handles['codeup'],
+	  timeout: 10000,
+	  cache: false,
+	  success: function(html) {
+	    if(html) {
+	      ratings['codeup'] = parseInt(html.split("jresult=4'>")[1].split("</a>")[0]);
+		  let tmp = html.split('위</td>')[1].split("\r\n\t");
+		  console.log(tmp);
+		  ranks['codeup'] = parseInt(tmp[tmp.length-1]);
+		  console.log(ranks['codeup']);
+		  setHtml('codeup');
+		}
+		else {
+		  setHtmlWithoutColor('codeup');
+		}
+	  },
+	  error: function() {
+		setHtmlWithoutColor('codeup');
+	  }
+	});
+  }
 
   function makeProfileList(){
     let inner = "";
@@ -202,6 +251,9 @@
 	if(handles['cryptohack'] !== 'None'){
       inner += `<li>CryptoHack: <a id="cryptohack" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>`;
     }
+	if(handles['codeup'] !== 'None'){
+      inner += `<li>CodeUp: <a id="codeup" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>`;
+    }
 
     let ul = document.getElementById('profile-list');
     ul.innerHTML = inner;
@@ -210,6 +262,7 @@
     if(handles['codeforces'] !== 'None') getCodeforcesRating();
     if(handles['atcoder'] !== 'None') getAtCoderInfo();
 	if(handles['cryptohack'] !== 'None') getCryptohackInfo();
+	if(handles['codeup'] !== 'None') getCodeupInfo();
   }
 
   makeProfileList();
