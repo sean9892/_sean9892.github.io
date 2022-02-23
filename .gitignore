@@ -4,3 +4,4 @@ _site
 
 .ruby-version
 _authors/makeAuthor.py
+.DS_Store
