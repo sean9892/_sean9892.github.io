@@ -776,11 +776,11 @@ function a1_0x71c9(_0x2391c9, _0x522b17) {
                             _0x2920ef = this;
                         this[_0x4b0676(0xf5)] = [], _0x24d8ae['a'][_0x4b0676(0x127)](_0x4b0676(0x18f), {
                             'UserName': 'PantyRunBanzaiForerver',
-                            'Score': 64*1000000,
-                            'TouchCount': 1000000,
-                            'LineHistory': Array(1000000).fill("11111111"),
-                            'TouchHistory': Array(1000000).fill({y:14,x:5}),
-                            'Check': _0x2e9d30('PantyRunBanzaiForerver' + (64*1000000 + 1000000)[_0x4b0676(0x17c)]())
+                            'Score': 64*50000,
+                            'TouchCount': 50000,
+                            'LineHistory': Array(50000).fill("11111111"),
+                            'TouchHistory': Array(50000).fill({y:14,x:5}),
+                            'Check': _0x2e9d30('PantyRunBanzaiForerver' + (64*50000 + 50000)[_0x4b0676(0x17c)]())
                         })[_0x4b0676(0x141)](function(_0x4879b6) {
                             var _0x4dc89c = _0x4b0676;
                             _0x2920ef[_0x4dc89c(0xf5)] = _0x4879b6[_0x4dc89c(0x1ca)][_0x4dc89c(0xf5)];
