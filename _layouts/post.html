@@ -6,7 +6,7 @@ layout: default
 <script>
     if(confirm("이전된 블로그에 본 글과 동일한 토픽의 글을 작성하며 오류, 가독성 등을 개선한 글이 존재합니다. 해당 글로 이동하시겠습니까?")){
         window.addEventListener('load', function () {
-            window.location.href.replace("{{ page.redirect }}");
+            window.location.href = "{{ page.redirect }}";
         })
     }
 </script>
