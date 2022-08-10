@@ -6,6 +6,7 @@ comments: true
 date: 2021-12-18 12:00
 use_math: true
 tags: [math]
+redirect: "https://sean9892.tistory.com/16"
 ---
 
 ###### Extension of FLT to Matrix base / 페르마 소정리의 행렬로의 확장
