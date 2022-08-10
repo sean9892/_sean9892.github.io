@@ -32,7 +32,10 @@ layout: default
 </div>
 
 <div id="content" class="container post" role="main">
-    <div id="post-content">{{ content }}</div>
+    <div id="post-content">
+        {% if page.redirect %}<a href="{{ page.redirect }}">이전된 블로그의 글로 이동하기</a>{% endif %}
+        {{ content }}
+    </div>
     <div id="post-footer">
         {% assign author = site.authors | where: 'name', page.author | first %}
         <a id="post-author" href="{{ author.url }}">
