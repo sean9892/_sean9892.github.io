@@ -9,6 +9,8 @@ excerpt: Introducing
 tags: []
 ---
 
+[View updated CV](https://sean9892.tistory.com/pages/CV)
+
 ### 학력 / 소속
 
 - 학교
