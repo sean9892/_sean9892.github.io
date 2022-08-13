@@ -6,6 +6,7 @@ comments: true
 date: 2021-09-14 14:00
 use_math: true
 tags: [crypto]
+redirect: "https://sean9892.tistory.com/30"
 ---
 
 ### 서론
