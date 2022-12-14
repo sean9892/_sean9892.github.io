@@ -1,3 +1,8 @@
+---
+layout: post
+title: Tags
+permalink: /view/
+---
 # 1. Introduction
 
 저번 글에서는 양자 컴퓨터와 Post Quantum Cryptography에 대해 다루었습니다. 이번 포스팅에서는 어떤 암호 시스템을 다루어볼까 고민하다가 NIST에서 진행하는 PQC contest의 3라운드 7개의 후보 중에서 5개가 Lattice-based인 만큼 Lattice를 기반 문제로 사용하는 `SABER` 암호의 동작 원리, 장단점을 소개해보려고 합니다.
